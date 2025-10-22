@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
     height: 50,
     marginRight: 10,
   },
-  appName: {
+  appName: {//This is  style for the name of the chef's mobile app
     fontSize: 22,
     fontWeight: "bold",
     color: "#000000ff",
