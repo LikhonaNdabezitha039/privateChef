@@ -118,7 +118,7 @@ export default function App() {
       {/*Starters*/}
       <Text style={styles.sectionHeader}>Starters</Text>
 
-      <View style={styles.menuItem}>
+      <View style={styles.menuItem}>{/*This is the first item in the menu which the chef has prepared*/}
         <Image source={require("./Images/cheesy_q.png")} style={styles.menuImage} />
         <Text style={styles.menuItemTitle}>Cheesy Chicken Quesadilla - R95.99</Text>
         <Text style={styles.menuDescription}>
@@ -221,9 +221,6 @@ export default function App() {
           Layers of soft sponge, rich cream, and fresh strawberries finished with a glaze.
         </Text>
       </View>
-
-      
-
       <StatusBar style="auto" />
     </ScrollView>
   );
