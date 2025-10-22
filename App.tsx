@@ -107,6 +107,11 @@ export default function App() {
 
       <Button title="Add Item" onPress={addNewItem} color="#e63946" />
 
+      {/* Total number of custom items added by the chef to the menu items*/}
+      <Text style={styles.totalCount}>
+        Total Items: {productCatalogue.length}
+      </Text>
+
       {/*Full menu*/}
       <Text style={styles.menuTitle}>Full Menu</Text>
 
@@ -217,10 +222,7 @@ export default function App() {
         </Text>
       </View>
 
-      {/* Total number of custom items added by the chef */}
-      <Text style={styles.totalCount}>
-        Total Custom Items: {productCatalogue.length}
-      </Text>
+      
 
       <StatusBar style="auto" />
     </ScrollView>
