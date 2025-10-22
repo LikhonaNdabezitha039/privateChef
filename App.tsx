@@ -94,7 +94,7 @@ export default function App() {
         style={styles.input}
       />{/*The IIE, 2025*/}
       {/*This flatlist displays all the items added by the chef*/}
-      <FlatList
+      <FlatList{/*React Native, 2025*/}
       data={productCatalogue}
       keyExtractor={(storeItem) => storeItem.id}
       renderItem={({item}) => (
