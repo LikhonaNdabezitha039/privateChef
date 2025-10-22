@@ -94,7 +94,7 @@ export default function App() {
         style={styles.input}
       />{/*The IIE, 2025*/}
       {/*This flatlist displays all the items added by the chef*/}
-      <FlatList{/*React Native, 2025*/}
+      <FlatList
       data={productCatalogue}
       keyExtractor={(storeItem) => storeItem.id}
       renderItem={({item}) => (
@@ -104,7 +104,7 @@ export default function App() {
         </View>
       )}
       style={styles.itemList }
-      />
+      />{/*React Native, 2025*/}
 
       <Button title="Add Item" onPress={addNewItem} color="#e63946" />{/*The IIE, 2025*/}
 
