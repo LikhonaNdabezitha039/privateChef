@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import {StyleSheet,Text,
         View,TextInput,Button,
         FlatList,ScrollView,Image,
-} from "react-native";
+} from "react-native";//This is the where i imported the react native components.
 
 //This define what each StoreItem has (the attributes that describe a menu item)
 type storeItem = {
@@ -57,7 +57,7 @@ export default function App() {
         <Image
           source={require('./Images/chef_logo.png')}
           style={styles.logoImage}
-        />
+        />{/*The is the name of the chef's moobile */}
         <Text style={styles.appName}>Christofel</Text>
       </View>
      
