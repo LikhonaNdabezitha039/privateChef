@@ -92,7 +92,7 @@ export default function App() {
         onChangeText={setItemDescription}
         style={styles.input}
       />
-
+      {/*This flatlist displays all the items added by the chef*/}
       <FlatList
       data={productCatalogue}
       keyExtractor={(storeItem) => storeItem.id}
