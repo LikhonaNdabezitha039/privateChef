@@ -3,8 +3,9 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import {StyleSheet,Text,
         View,TextInput,Button,
-        FlatList,ScrollView,Image,
+        FlatList,ScrollView,Image,//The IIE, 2025
 } from "react-native";//This is the where i imported the react native components.
+
 
 //This define what each StoreItem has (the attributes that describe a menu item)
 type storeItem = {
@@ -19,17 +20,17 @@ type storeItem = {
 export default function App() {
   // State variables for each text input field
   const [itemName, setItemName] = useState("");
-  const [itemCategory, setItemCategory] = useState("");
+  const [itemCategory, setItemCategory] = useState("");//The IIE, 2025
   const [itemPrice, setItemPrice] = useState("");
   const [itemDescription, setItemDescription] = useState("");
 
   //State variable that holds all menu items added by the chef
-  const [productCatalogue, setProductCatalogue] = useState<storeItem[]>([]);
+  const [productCatalogue, setProductCatalogue] = useState<storeItem[]>([]);//The IIE, 2025
 
   //Function that adds new item to the list
   const addNewItem = () => {
     // Check if any field is empty before adding
-    if (!itemName || !itemCategory || !itemPrice || !itemDescription) return;
+    if (!itemName || !itemCategory || !itemPrice || !itemDescription) return;//The IIE, 2025
 
     // Create new item object with all entered details
     const newItem: storeItem = {
@@ -52,13 +53,13 @@ export default function App() {
 
   //App User Interface starts here
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container}>{/*The IIE, 2025*/}
       <View style={styles.header}>
         <Image
           source={require('./Images/chef_logo.png')}
           style={styles.logoImage}
         />{/*The is the name of the chef's moobile */}
-        <Text style={styles.appName}>Christofel</Text>
+        <Text style={styles.appName}>Christofel</Text>{/*The IIE, 2025*/}
       </View>
      
       
@@ -70,7 +71,7 @@ export default function App() {
         value={itemName}
         onChangeText={setItemName}
         style={styles.input}
-      />
+      />{/*The IIE, 2025*/}
 
       <TextInput
         placeholder="Item Category"
@@ -91,7 +92,7 @@ export default function App() {
         value={itemDescription}
         onChangeText={setItemDescription}
         style={styles.input}
-      />
+      />{/*The IIE, 2025*/}
       {/*This flatlist displays all the items added by the chef*/}
       <FlatList
       data={productCatalogue}
@@ -105,7 +106,7 @@ export default function App() {
       style={styles.itemList }
       />
 
-      <Button title="Add Item" onPress={addNewItem} color="#e63946" />
+      <Button title="Add Item" onPress={addNewItem} color="#e63946" />{/*The IIE, 2025*/}
 
       {/* Total number of custom items added by the chef to the menu items*/}
       <Text style={styles.totalCount}>
@@ -128,7 +129,7 @@ export default function App() {
       </View>
 
       <View style={styles.menuItem}>
-        <Image source={require("./Images/buffalo_wings.png")} style={styles.menuImage} />
+        <Image source={require("./Images/buffalo_wings.png")} style={styles.menuImage} />{/*The IIE, 2025*/}
         <Text style={styles.menuItemTitle}>Buffalo Wings (12) - R139.99</Text>
         <Text style={styles.menuDescription}>
           Served with Durky Sauce and Roquefort Dressing.
@@ -137,7 +138,7 @@ export default function App() {
 
       <View style={styles.menuItem}>
         <Image source={require("./Images/spicy_livers.png")} style={styles.menuImage} />
-        <Text style={styles.menuItemTitle}>Spicy Chicken Livers - R84.99</Text>
+        <Text style={styles.menuItemTitle}>Spicy Chicken Livers - R84.99</Text>{/*The IIE, 2025*/}
         <Text style={styles.menuDescription}>
           Served with a toasted Portuguese garlic roll.
         </Text>
@@ -156,7 +157,7 @@ export default function App() {
       <Text style={styles.sectionHeader}>Main Courses</Text>
 
       <View style={styles.menuItem}>
-        <Image source={require("./Images/ribs.png")} style={styles.menuImage} />
+        <Image source={require("./Images/ribs.png")} style={styles.menuImage} />{/*The IIE, 2025*/}
         <Text style={styles.menuItemTitle}>Ribs & Quarter Chicken - R349.99</Text>
         <Text style={styles.menuDescription}>
           Marinated pork ribs with a quarter chicken.
@@ -206,7 +207,7 @@ export default function App() {
         </Text>
       </View>
 
-      <View style={styles.menuItem}>
+      <View style={styles.menuItem}>{/*The IIE, 2025*/}
         <Image source={require("./Images/creme_brulee.png")} style={styles.menuImage} />
         <Text style={styles.menuItemTitle}>Creme Brulee - R59.99</Text>
         <Text style={styles.menuDescription}>
@@ -227,7 +228,7 @@ export default function App() {
 }
 
 //style section(layout and color design)
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({//The IIE, 2025
   container: {
     flex: 1,
     backgroundColor: "#e8cdcdff",
@@ -249,7 +250,7 @@ const styles = StyleSheet.create({
     color: "#000000ff",
   },
   
-  title: {
+  title: {//The IIE, 2025
     fontSize: 18,
     fontWeight: "600",
     marginVertical: 10,
@@ -282,7 +283,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     paddingHorizontal: 10,
   },
-  menuImage: {
+  menuImage: {//The IIE, 2025
     width: 250,
     height: 160,
     borderRadius: 10,
@@ -305,7 +306,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   displayItem: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: '#8c7de1ff',
     padding: 20,
     borderRadius: 10,
     marginBottom: 10,
